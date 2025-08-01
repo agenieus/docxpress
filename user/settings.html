@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Account Settings</title>
+  <link rel="stylesheet" href="../css/core.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/settings.css">
+</head>
+<body>
+  <!-- Sidebar (shown) -->
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <img src="../assets/images/logo1-removebg-preview.png" alt="DocXpress" class="sidebar-logo">
+      <button class="sidebar-toggle" id="sidebarToggle">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    
+    <nav class="sidebar-nav">
+      <ul>
+        <li class="active">
+          <a href="dashboard.html">
+            <i class="fas fa-upload"></i>
+            <span>Upload File</span>
+          </a>
+        </li>
+        <li>
+          <a href="history.html">
+            <i class="fas fa-history"></i>
+            <span>History</span>
+          </a>
+        </li>
+        <li>
+          <a href="profile.html">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="settings.html">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+          </a>
+        </li>
+        <li>
+          <a href="./login.html" id="logoutBtn">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <h1>Account Settings</h1>
+    
+    <div class="settings-tabs">
+      <button class="tab-button active" data-tab="account">Account</button>
+      <button class="tab-button" data-tab="security">Security</button>
+      <button class="tab-button" data-tab="notifications">Notifications</button>
+      <button class="tab-button" data-tab="danger">Danger Zone</button>
+    </div>
+
+    <!-- Account Tab -->
+    <div id="account" class="tab-content active">
+      <form id="account-settings">
+        <div class="form-group">
+          <label>Language</label>
+          <select>
+            <option>English</option>
+            <option>French</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label>Timezone</label>
+          <select>
+            <option>(GMT+1) West Africa Time</option>
+            <option>(GMT) Greenwich Mean Time</option>
+          </select>
+        </div>
+        
+        <button type="submit" class="button">Save Preferences</button>
+      </form>
+    </div>
+
+    <!-- Security Tab -->
+    <div id="security" class="tab-content">
+      <div class="security-item">
+        <h3>Two-Factor Authentication</h3>
+        <p>Add an extra layer of security to your account</p>
+        <label class="switch">
+          <input type="checkbox" id="2fa-toggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+      
+      <div class="security-item">
+        <h3>Active Sessions</h3>
+        <div class="sessions-list">
+          <div class="session">
+            <div>
+              <strong>Chrome on Windows</strong>
+              <span>Lagos, Nigeria • Active now</span>
+            </div>
+            <button class="button logout-btn">Log Out</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Danger Zone Tab -->
+    <div id="danger" class="tab-content">
+      <div class="danger-item">
+        <h3>Delete Account</h3>
+        <p>Permanently remove your account and all data</p>
+        <button class="button delete-account">Delete My Account</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="../js/settings.js"></script>
+</body>
+</html>

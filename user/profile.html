@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile Settings</title>
+  <link rel="stylesheet" href="../css/core.css">
+  <link rel="stylesheet" href="../css/profile.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <img src="../assets/images/logo1-removebg-preview.png" alt="DocXpress" class="sidebar-logo">
+      <button class="sidebar-toggle" id="sidebarToggle">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    
+    <nav class="sidebar-nav">
+      <ul>
+        <li class="active">
+          <a href="dashboard.html">
+            <i class="fas fa-upload"></i>
+            <span>Upload File</span>
+          </a>
+        </li>
+        <li>
+          <a href="history.html">
+            <i class="fas fa-history"></i>
+            <span>History</span>
+          </a>
+        </li>
+        <li>
+          <a href="profile.html">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="settings.html">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+          </a>
+        </li>
+        <li>
+          <a href="./login.html" id="logoutBtn">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <h1>Profile Settings</h1>
+    
+    <div class="profile-card">
+      <!-- Profile Picture Upload -->
+      <div class="profile-pic-container">
+        <img src="assets/default-avatar.jpg" alt="Profile" id="profile-pic">
+        <input type="file" id="profile-upload" accept="image/*">
+        <label for="profile-upload" class="upload-label">Change Photo</label>
+      </div>
+
+      <!-- Bio Data Form -->
+      <form id="profile-form">
+        <div class="form-group">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" value="John Doe" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" value="john@example.com" readonly>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="form-group">
+          <label>Social Links</label>
+          <div class="social-links">
+            <input type="url" placeholder="Twitter URL" value="https://twitter.com/johndoe">
+            <input type="url" placeholder="LinkedIn URL">
+          </div>
+        </div>
+
+        <button type="submit" class="button">Save Changes</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="js/profile.js"></script>
+</body>
+</html>

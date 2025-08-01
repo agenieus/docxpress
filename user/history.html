@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversion History | DocXpress</title>
+  <link rel="stylesheet" href="../css/core.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/history.css">
+  <!-- Same head content as profile -->
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <img src="../assets/images/logo1-removebg-preview.png" alt="DocXpress" class="sidebar-logo">
+      <button class="sidebar-toggle" id="sidebarToggle">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    
+    <nav class="sidebar-nav">
+      <ul>
+        <li class="active">
+          <a href="dashboard.html">
+            <i class="fas fa-upload"></i>
+            <span>Upload File</span>
+          </a>
+        </li>
+        <li>
+          <a href="history.html">
+            <i class="fas fa-history"></i>
+            <span>History</span>
+          </a>
+        </li>
+        <li>
+          <a href="profile.html">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="settings.html">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+          </a>
+        </li>
+        <li>
+          <a href="./login.html" id="logoutBtn">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+  <main class="main-content">
+    <header class="main-header">
+      <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <h1>Conversion History</h1>
+      <div class="history-actions">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search files..." id="searchHistory">
+        </div>
+        <button class="btn btn-secondary" id="filterBtn">
+          <i class="fas fa-filter"></i> Filter
+        </button>
+      </div>
+    </header>
+
+    <section class="history-section">
+      <div class="history-filters" id="historyFilters">
+        <div class="filter-group">
+          <label>Date Range</label>
+          <select id="dateRange">
+            <option value="all">All Time</option>
+            <option value="week">Last 7 Days</option>
+            <option value="month">Last 30 Days</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Status</label>
+          <select id="statusFilter">
+            <option value="all">All Statuses</option>
+            <option value="success">Successful</option>
+            <option value="failed">Failed</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="history-grid" id="historyGrid">
+        <!-- Will be populated dynamically -->
+        <div class="history-item">
+          <div class="file-info">
+            <i class="fas fa-file-pdf"></i>
+            <div class="file-details">
+              <h4>document.pdf</h4>
+              <p>Converted on Jan 15, 2023</p>
+              <span class="file-size">2.4 MB</span>
+              <span class="status-badge success">Success</span>
+            </div>
+          </div>
+          <div class="file-actions">
+            <button class="btn-icon download-btn">
+              <i class="fas fa-download"></i>
+            </button>
+            <button class="btn-icon delete-btn">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="history-pagination">
+        <button class="btn btn-secondary" disabled>Previous</button>
+        <span>Page 1 of 5</span>
+        <button class="btn btn-secondary">Next</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/history.js"></script>
+</body>
+</html>

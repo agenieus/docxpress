@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | DocXpress</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Josefin+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <img src="../assets/logos/docxpress-icon.svg" alt="DocXpress" class="sidebar-logo">
+      <button class="sidebar-toggle" id="sidebarToggle">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    
+    <nav class="sidebar-nav">
+      <ul>
+        <li class="active">
+          <a href="dashboard.html">
+            <i class="fas fa-upload"></i>
+            <span>Upload File</span>
+          </a>
+        </li>
+        <li>
+          <a href="history.html">
+            <i class="fas fa-history"></i>
+            <span>History</span>
+          </a>
+        </li>
+        <li>
+          <a href="profile.html">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="settings.html">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" id="logoutBtn">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="main-header">
+      <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <h1>Welcome, <span id="userName">User</span></h1>
+      <div class="user-actions">
+        <button class="btn-icon" id="notificationsBtn">
+          <i class="fas fa-bell"></i>
+        </button>
+        <div class="user-avatar" id="userAvatar">
+          <img src="../assets/icons/default-avatar.png" alt="Profile">
+        </div>
+      </div>
+    </header>
+
+    <!-- Upload Section -->
+    <section class="upload-section">
+      <div class="upload-card" id="dropZone">
+        <div class="upload-icon">
+          <i class="fas fa-cloud-upload-alt"></i>
+        </div>
+        <h2>Upload PDF File</h2>
+        <p>Drag & drop your file here or</p>
+        <div class="upload-buttons">
+          <button class="btn btn-secondary" id="browseFiles">
+            <i class="fas fa-folder-open"></i> Browse Files
+          </button>
+          <button class="btn btn-secondary" id="googleDrive">
+            <i class="fab fa-google-drive"></i> Google Drive
+          </button>
+        </div>
+        <input type="file" id="fileInput" accept=".pdf" style="display: none;">
+      </div>
+
+      <!-- File Preview and Conversion -->
+      <div class="file-preview" id="filePreview" style="display: none;">
+        <div class="file-info">
+          <i class="fas fa-file-pdf"></i>
+          <span id="fileName">No file selected</span>
+          <button class="btn-icon" id="removeFile">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="conversion-controls">
+          <button class="btn btn-primary" id="convertBtn">
+            <i class="fas fa-file-word"></i> Convert to Word
+          </button>
+          <div class="conversion-progress" id="conversionProgress" style="display: none;">
+            <div class="progress-bar">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <span id="progressPercent">0%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Files -->
+    <section class="recent-files">
+      <h2>Recent Conversions</h2>
+      <div class="files-grid" id="recentFiles">
+        <!-- Dynamically populated -->
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/dashboard.js"></script>
+  <!-- Google Picker API -->
+  <script src="https://apis.google.com/js/api.js"></script>
+</body>
+</html>

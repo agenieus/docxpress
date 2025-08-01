@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pricing | DocXpress</title>
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/pricing.css">
+  <!-- Same head content -->
+</head>
+<body class="pricing-page">
+  <!-- No sidebar for pricing page -->
+  <header class="pricing-header">
+    <div class="container">
+      <h1>Choose Your Plan</h1>
+      <p>Convert PDFs effortlessly with our affordable pricing plans</p>
+      <div class="billing-toggle">
+        <span>Monthly</span>
+        <label class="switch">
+          <input type="checkbox" id="billingToggle">
+          <span class="slider"></span>
+        </label>
+        <span>Annual (20% off)</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="pricing-plans">
+    <div class="plan-card basic">
+      <div class="plan-header">
+        <h3>Basic</h3>
+        <div class="plan-price">
+          <span class="amount">₦2,500</span>
+          <span class="period">/month</span>
+        </div>
+      </div>
+      <ul class="plan-features">
+        <li><i class="fas fa-check"></i> 50 conversions/month</li>
+        <li><i class="fas fa-check"></i> 10MB max file size</li>
+        <li><i class="fas fa-check"></i> Basic formatting</li>
+        <li><i class="fas fa-times"></i> Priority support</li>
+      </ul>
+      <button class="btn btn-secondary">Get Started</button>
+    </div>
+
+    <div class="plan-card pro featured">
+      <div class="plan-badge">Most Popular</div>
+      <div class="plan-header">
+        <h3>Professional</h3>
+        <div class="plan-price">
+          <span class="amount">₦5,000</span>
+          <span class="period">/month</span>
+        </div>
+      </div>
+      <ul class="plan-features">
+        <li><i class="fas fa-check"></i> 200 conversions/month</li>
+        <li><i class="fas fa-check"></i> 25MB max file size</li>
+        <li><i class="fas fa-check"></i> Advanced formatting</li>
+        <li><i class="fas fa-check"></i> Priority support</li>
+      </ul>
+      <button class="btn btn-primary">Get Started</button>
+    </div>
+
+    <div class="plan-card enterprise">
+      <div class="plan-header">
+        <h3>Enterprise</h3>
+        <div class="plan-price">
+          <span class="amount">₦15,000</span>
+          <span class="period">/month</span>
+        </div>
+      </div>
+      <ul class="plan-features">
+        <li><i class="fas fa-check"></i> Unlimited conversions</li>
+        <li><i class="fas fa-check"></i> 100MB max file size</li>
+        <li><i class="fas fa-check"></i> Premium formatting</li>
+        <li><i class="fas fa-check"></i> 24/7 dedicated support</li>
+      </ul>
+      <button class="btn btn-secondary">Contact Sales</button>
+    </div>
+  </main>
+
+  <section class="comparison-section">
+    <div class="container">
+      <h2>Plan Comparison</h2>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Basic</th>
+            <th>Professional</th>
+            <th>Enterprise</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monthly Conversions</td>
+            <td>50</td>
+            <td>200</td>
+            <td>Unlimited</td>
+          </tr>
+          <!-- More comparison rows -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="payment-options">
+    <p>We accept:</p>
+    <div class="payment-icons">
+      <i class="fab fa-cc-visa"></i>
+      <i class="fab fa-cc-mastercard"></i>
+      <img src="./assets/paystack-icon.png" alt="Paystack">
+      <img src="./assets/flutterwave-icon.png" alt="Flutterwave">
+    </div>
+  </div>
+
+  <script src="../js/pricing.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | DocXpress</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Josefin+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/auth.css">
+  <link rel="stylesheet" href="../css/preloader.css">
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-card">
+      <img src="../assets/images/5-removebg-preview.png" alt="DocXpress" class="auth-logo">
+      <h1>Create Account</h1>
+      
+      <form id="signupForm">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" placeholder="John Doe" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+          <div class="error-message" id="emailError"></div>
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="••••••••" required>
+          <div class="password-strength">
+            <span class="strength-weak" id="strengthIndicator">Weak</span>
+            <div class="strength-meter">
+              <div class="strength-bar" id="strengthBar"></div>
+            </div>
+          </div>
+          <div class="password-requirements">
+            <ul>
+              <li id="req-length">Minimum 12 characters</li>
+              <li id="req-upper">1 uppercase letter</li>
+              <li id="req-lower">1 lowercase letter</li>
+              <li id="req-special">1 special character</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" placeholder="••••••••" required>
+          <div class="error-message" id="confirmError"></div>
+        </div>
+    <!--
+        <div class="form-group checkbox-group">
+          <label class="checkbox-container">
+            <input type="checkbox" id="agreeTerms" name="agreeTerms" required><p>I agree to the <a href="#" id="termsLink">Terms & Conditions</a></p>
+          </label>
+        </div>
+    -->
+        <button type="submit" class="btn btn-primary" id="signupBtn">Create Account</button>
+      </form>
+      
+    
+      
+      <div class="auth-footer">
+        Already have an account? <a href="./login.html" class="text-link">Sign In</a>
+      </div>
+    </div>
+  </div>
+///
+  <!-- Terms Modal -->
+  <div class="modal" id="termsModal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Terms & Conditions</h2>
+      <div class="modal-body">
+        <!-- Terms content here -->
+      </div>
+      <button class="btn btn-primary" id="acceptTerms">I Accept</button>
+    </div>
+  </div>
+
+///
+  <!-- In all pages before </body> -->
+<div class="preloader">
+  <div class="spinner-border">
+    <img src="../assets/images/docxpress.svg" alt="Loading...">
+  </div>
+</div>
+  <script src="../js/api-service.js"></script>
+  <script src="../js/form-validation.js"></script>
+  <script src="../js/auth.js"></script>
+</body>
+</html>
