@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, 1000);
 });
 
+
 //google signin
 // auth.js
 function initGoogleAuth() {

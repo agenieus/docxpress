@@ -85,7 +85,16 @@ body {
 .auth-footer {
   margin-top: 20px;
 }
-
+.login {
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #07479D;
+  color: white;
+}
 .text-link {
   color: var(--primary);
   text-decoration: none;

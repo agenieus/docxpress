@@ -118,9 +118,11 @@ body {
 }
 
 .mobile-menu-toggle {
-  display: none;
+  display: block;
   background: none;
   border: none;
+  height: 25px;
+  width: 29.5px;
   font-size: 20px;
   color: var(--accent);
   margin-right: 15px;
@@ -359,6 +361,47 @@ body {
   
   .mobile-menu-toggle {
     display: block;
+    height: 25px;
+    width: 29.5px;
+  }
+  
+  .upload-buttons {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 320px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  
+  .sidebar.active {
+    transform: translateX(0);
+  }
+  
+  .sidebar-toggle {
+    display: block;
+  }
+  
+  .sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+  
+  .mobile-menu-toggle {
+    display: block;
+    height: 25px;
+    width: 29.5px;
   }
   
   .upload-buttons {
