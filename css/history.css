@@ -1,7 +1,12 @@
 /* History Page Specific Styles */
 .history-section {
   padding: var(--space-xl) 0;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
 }
+
 
 .history-item {
   display: flex;
@@ -36,6 +41,38 @@
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 */
+
+select {
+  background-color: rgb(14, 6, 94);
+  border: none;
+  font-size: 12px;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  height: 40px;
+  width: 100px;
+}
+
+select:hover {
+  background-color: rgb(132, 120, 243);
+  border: none;
+  font-size: 12px;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.history-grid {
+  justify-content: center;
+  width:  500px;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+}
 
 .file-actions .btn-icon {
   margin-left: var(--space-md);

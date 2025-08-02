@@ -51,3 +51,16 @@ class Sidebar {
 document.addEventListener('DOMContentLoaded', () => {
   new Sidebar();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Get current page name (e.g., "profile" from "profile.html")
+  const currentPage = window.location.pathname.split('/').pop().replace('.html', '');
+  
+  // Highlight matching sidebar item
+  document.querySelectorAll('.sidebar a').forEach(link => {
+    if (link.getAttribute('data-page') === currentPage) {
+      link.classList.add('active');
+      link.style.pointerEvents = 'none'; // Disable clicking on active item
+    }
+  });
+});
